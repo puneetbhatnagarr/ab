@@ -1,0 +1,31 @@
+<h1 style="color: olive">Testing</h1>
+<div>
+  <h2>Update content</h2>
+  <br>
+<h1>
+
+</h1>
+<form [formGroup]="form" (ngSubmit)="editdata()">
+
+  <div class="mb-3">
+    <label  class="form-label">title</label>
+    <input type="text" class="form-control"  placeholder="Enter title" formControlName="title">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">body</label>
+    <input type="text" class="form-control"  placeholder="Enter body" formControlName="body">
+  </div>
+  
+  <div class="mb-3">
+    <label  class="form-label">description</label>
+    <input type="text" class="form-control"  placeholder="Enter description" formControlName="description">
+  </div>
+  
+  
+
+  <div class="form-check mb-3">
+
+  </div>
+  <button type="submit" class="btn btn-info">Update Record</button>
+</form>
+

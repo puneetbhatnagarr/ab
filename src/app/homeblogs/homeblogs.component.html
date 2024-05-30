@@ -1,0 +1,25 @@
+<div style=" align-items: center; justify-content: center;">
+<h1 style="color: olive">Testing</h1>
+
+  <h2>Home page</h2>
+  <br>
+  <form [formGroup]="form1" (ngSubmit)="demo1()">
+    <div class="mb-2 mt-2">
+      <label class="form-label">Title:</label>
+      <input type="text" class="form-control" placeholder="Enter Title" formControlName="title">
+    </div>
+    <div class="mb-2 mt-2">
+      <label class="form-label">Description:</label>
+      <input type="text" class="form-control" placeholder="Enter description" formControlName="description">
+    </div>
+    <div class="mb-2 mt-2">
+      <label class="form-label">Body:</label><br>
+      <textarea formControlName="body" placeholder="Enter body" rows="5" cols="180"></textarea>
+    </div>
+    <button type="submit" class="btn btn-info mb-2 mt-2">Submit</button>
+  
+  </form>
+  <button type="submit"  (click)="democlick()" class="btn btn-info mb-2 mt-2">Display</button>
+</div>
+
+

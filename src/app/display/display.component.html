@@ -1,0 +1,31 @@
+<h1 style="color: olive">Testing</h1>
+<div>
+  <h2>Dispaly content</h2>
+  <br>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <!-- <th scope="col">Body</th> -->
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+        <ng-container *ngFor="let blogdata of getall">
+      <tr >
+        <td>{{ blogdata.title }}</td>
+        <td>{{ blogdata.description }}</td>
+        <!-- <td>{{ blogdata.body }}</td> -->
+        <td class="bg-white">
+          <a [routerLink]="['/blogview/'+ blogdata._id]" class="btn btn-info">view</a>&nbsp;
+          <a [routerLink]="['/update/',blogdata._id]" class="btn btn-warning">Edit</a>&nbsp;
+          <a (click)="deleteall(blogdata._id)"  class="btn btn-danger">Delete</a>
+        </td>
+
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+</div>
